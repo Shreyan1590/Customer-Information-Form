@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group-inline {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group-inline .form-group {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-group-inline .form-group:last-child {
+            margin-right: 0;
+        }
+        .form-group .checkbox-label {
+            display: flex;
+            align-items: center;
+        }
+        .form-group .checkbox-label input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Information Form</h2>
+        <form action="submit_form.php" method="post">
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="title">Title*</label>
+                    <select id="title" name="title" required>
+                        <option value="">Select</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Dr">Dr</option>
+                        <option value="Prof">Prof</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First*</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="initials">Initials</label>
+                    <input type="text" id="initials" name="initials">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last*</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Street Address*</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="address2">Street Address Line 2</label>
+                <input type="text" id="address2" name="address2">
+            </div>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="city">City*</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="region">Region*</label>
+                    <input type="text" id="region" name="region" required>
+                </div>
+            </div>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="postal">Postal / Zip Code*</label>
+                    <input type="text" id="postal" name="postal" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country*</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+            </div>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="phone">Customer Phone*</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="fax">Customer Fax</label>
+                    <input type="text" id="fax" name="fax">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dob">Customer Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="email">Customer ID/Email*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group checkbox-label">
+                <input type="checkbox" id="campaign" name="campaign">
+                <label for="campaign">I allow my information to be used for future campaigns</label>
+            </div>
+            <button type="submit" class="submit-btn">Send Information</button>
+        </form>
+    </div>
+</body>
+</html>
